@@ -14,4 +14,12 @@ describe DockingStation do
     bike = DockingStation.new.release_bike
     expect( bike).to respond_to(:working?)
   end
+  it 'check the docking station can dock a bike 'do 
+  dockingstation = DockingStation.new
+  expect(dockingstation).to respond_to(:dock).with(1).argument
+  end
+  it 'check the docking station has bike ' do
+  dockingstation = DockingStation.new
+  expect(dockingstation).to respond_to(:bike)
+  end
 end
