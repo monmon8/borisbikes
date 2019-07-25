@@ -37,3 +37,26 @@ docking station <------ release_bike?-----> a bike
      -> the line number : 1: from (irb):1
      -> fixing the error : we should define docking station in our code
 
+
+     As a member of the public
+So I can return bikes I've hired
+I want to dock my bike at the docking station
+
+     As a member of the public
+So I can decide whether to use the docking station
+I want to see a bike that has been docked
+
+Nouns:
+member
+docking station
+bike
+Verbs:
+use
+see
+hire
+dock
+
+ Objects           Messages
+member         | see 
+bike            | docked?
+docking station | dock

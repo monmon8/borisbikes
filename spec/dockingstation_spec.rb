@@ -16,10 +16,16 @@ describe DockingStation do
   end
   it 'check the docking station can dock a bike 'do 
   dockingstation = DockingStation.new
-  expect(dockingstation).to respond_to(:dock).with(1).argument
+  expect(dockingstation).to respond_to(:dock).with(1dockingdocking).argument
   end
   it 'check the docking station has bike ' do
   dockingstation = DockingStation.new
   expect(dockingstation).to respond_to(:bike)
   end
+  describe '#release_bike' do
+    it 'raises an error when there are no bikes available' do
+      expect { subject.release_bike }.to raise_error 'No bikes available'
+    end
+  end
+end
 end
