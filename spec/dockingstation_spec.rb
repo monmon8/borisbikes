@@ -14,9 +14,10 @@ describe DockingStation do
     bike = DockingStation.new.release_bike
     expect( bike).to respond_to(:working?)
   end
-  it 'check the docking station can dock a bike 'do 
+
+  it 'check the docking station can dock a bike 'do
   dockingstation = DockingStation.new
-  expect(dockingstation).to respond_to(:dock).with(1dockingdocking).argument
+  expect(dockingstation).to respond_to(:dock).with(1).argument
   end
   it 'check the docking station has bike ' do
   dockingstation = DockingStation.new
@@ -27,5 +28,10 @@ describe DockingStation do
       expect { subject.release_bike }.to raise_error 'No bikes available'
     end
   end
-end
+
+  it "Does not accept more bikes than capacity" do
+    subject.dock(Bike.new)
+    expect { subject.dock(Bike.new) }.to raise_error "Docking station is full"
+  end
+
 end
