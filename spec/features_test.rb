@@ -13,4 +13,11 @@ ds2 = DockingStation.new(100)
 
 100.times { ds2.dock Bike.new }
 
+# Feature Test 3
+ station = DockingStation.new
+ bike = Bike.new
+ bike.reported_bike
+ bike.broken?
+ 
+
 

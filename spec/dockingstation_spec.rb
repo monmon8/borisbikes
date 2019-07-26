@@ -46,5 +46,4 @@ describe DockingStation do
     expect(subject.capacity).to eq(DockingStation::DEFAULT_CAPACITY)
   end
 
-
 end
