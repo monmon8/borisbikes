@@ -6,7 +6,10 @@ class DockingStation
     @bikes = []
   end
   def release_bike
-    fail 'No bikes available' if empty?
+    bike_index = @bikes.find_index do |bike|
+      !bike.broken?
+    end 
+    fail 'No bikes available' if bike_index.nil?
     @bikes.pop
   end
   def dock(bike)
